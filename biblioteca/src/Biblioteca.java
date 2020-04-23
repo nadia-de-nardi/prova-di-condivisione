@@ -58,8 +58,6 @@ public class Biblioteca {
         }
 
     }
-    //ciao belli
-    //ciao
 
     public void cercaPerISBN (String ISBN){
         int temp = 0;
