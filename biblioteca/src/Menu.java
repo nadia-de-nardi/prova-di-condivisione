@@ -68,7 +68,7 @@ public class Menu {
         System.out.print("Inserisci codice ISBN del libro che vuoi cercare: ");
         String ISBN = scanner.nextLine();
 
-        biblioteca.cercaPerISBN(ISBN);
+        //biblioteca.cercaPerISBN(ISBN);
 
     }
 
@@ -86,6 +86,6 @@ public class Menu {
         System.out.print("Inserisci il genere del libro che vuoi cercare: ");
         String genere = scanner.nextLine();
 
-        biblioteca.cercaPerTitoloAutoreGenere(titolo, autore, genere);
+        //biblioteca.cercaPerTitoloAutoreGenere(titolo, autore, genere);
     }
 }

@@ -1,8 +1,12 @@
+import java.util.HashMap;
+import java.util.List;
+
 public class Libro {
     private String titolo;
     private String autore;
     private String genere;
     private String ISBN;
+    public static HashMap<String, Libro> libroPerCodice = new HashMap<String, Libro>();
 
     public Libro(String titolo,String autore, String genere, String ISBN){
 
@@ -41,7 +45,9 @@ public class Libro {
         this.scaffale = scaffale;
         this.numeroLibri =numeroLibri;
         this.codiceCatalogazione = piano+scaffale+numeroLibri;
+
     }
+
 
     public String getPiano() {
         return piano;
@@ -57,6 +63,14 @@ public class Libro {
 
     public void setNumeroLibri(int numeroLibri) {
         this.numeroLibri = numeroLibri;
+    }
+
+    public void setPiano(String piano) {
+        this.piano = piano;
+    }
+
+    public void setScaffale(String scaffale) {
+        this.scaffale = scaffale;
     }
 
     public String getCodiceCatalogazione() {

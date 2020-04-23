@@ -29,14 +29,15 @@ public class Biblioteca {
         if(piani[i] == null){
             piani[i]= new Piano(numeroScaffali[i]);
         }
-        piani[i].aggiungiLibro(libro, scaffale);
+        libro.setPiano(piano);
+        piani[i].aggiungiLibro(libro, scaffale, piani[i].getScaffali());
     }
 
     public void cercaPerPianoEScaffale (String piano, String scaffale){
         int indiceScaffale = 0;
 
-        String codiceScaffale = piano + scaffale; //PTA
-        List<Libro> listalibri = Map.get(codiceScaffale);
+        String codicePianoEScaffale = piano + scaffale; //PTA
+        List<Libro> listalibri = Scaffale.libri.get(codicePianoEScaffale);
 
         for (int i = 0; i < listalibri.size(); i++) {
          listalibri.get(i).getLibro();
@@ -50,6 +51,7 @@ public class Biblioteca {
                 break;
             }
         }
+        /*
         for(int i=0; i < piani.length; i++){
             Piano pianoCorrente = piani[i];
             if (pianoCorrente!=null && i==piano){
@@ -66,10 +68,11 @@ public class Biblioteca {
                     }
                 }
             }
+
         }
-
+*/
     }
-
+/*
     public void cercaPerISBN (String ISBN){
         int temp = 0;
 
@@ -169,5 +172,7 @@ public class Biblioteca {
         }
 
     }
+
+ */
 
 }

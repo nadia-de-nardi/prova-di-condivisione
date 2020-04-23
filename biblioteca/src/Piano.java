@@ -1,10 +1,12 @@
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Piano {
     private Scaffale[] scaffali;
     private char[] alfabeto = "ABCDEFGHILMN".toCharArray();
+    public static HashMap<String, Scaffale[]> pianoPerCodice = new HashMap<String, Scaffale[]>();
 
 
     public Piano(int numeroScaffali){
@@ -15,7 +17,7 @@ public class Piano {
         return scaffali;
     }
 
-    public void aggiungiLibro(Libro libro, String scaffale) {
+    public void aggiungiLibro(Libro libro, String scaffale, Scaffale[] listaScaffali) {
         char c = scaffale.charAt(0);
         int i=0;
 
@@ -26,8 +28,10 @@ public class Piano {
         }
 
         if(scaffali[i] == null){
-            scaffali[i]= new Scaffale();
+            List<Libro> listaLibri = new ArrayList<>();
+            scaffali[i]= new Scaffale(listaLibri);
         }
-        scaffali[i].aggiungiLibro(libro);
+        libro.setScaffale(scaffale);
+        scaffali[i].aggiungiLibro(libro, scaffali[i].getListaLibri(), listaScaffali );
     }
 }
