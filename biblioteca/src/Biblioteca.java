@@ -32,7 +32,7 @@ public class Biblioteca {
         piani[i].aggiungiLibro(libro, scaffale);
     }
 
-    public void cercaPerPianoEScaffale (int piano, String scaffale){
+    public void cercaPerPianoEScaffale (String piano, String scaffale){
         int indiceScaffale = 0;
 
         String codiceScaffale = piano + scaffale; //PTA
@@ -42,7 +42,7 @@ public class Biblioteca {
          listalibri.get(i).getLibro();
          listalibri.get(i).visualizzaCodiceCatalogazione();
         }
-        
+
         for(int i=0; i < lettereScaffali.length; i++){
 
             if (lettereScaffali[i].equals(scaffale)){

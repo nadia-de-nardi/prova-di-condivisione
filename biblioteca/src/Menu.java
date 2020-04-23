@@ -50,9 +50,8 @@ public class Menu {
     public static String getLibriPerPianoEScaffale (Biblioteca biblioteca){
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Inserisci codicePiano:\n0) PT\n1)PP\n2)SP ");
-        String p = scanner.nextLine();
-        int piano = Integer.parseInt(p);
+        System.out.println("Inserisci codicePiano:\n PT\n PP\n SP ");
+        String piano = scanner.nextLine();
 
         System.out.println("Inserisci codiceScaffale (Es.: B) : ");
         String scaffale = scanner.nextLine();
