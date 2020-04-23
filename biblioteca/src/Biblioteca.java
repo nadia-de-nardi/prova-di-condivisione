@@ -35,6 +35,14 @@ public class Biblioteca {
     public void cercaPerPianoEScaffale (int piano, String scaffale){
         int indiceScaffale = 0;
 
+        String codiceScaffale = piano + scaffale; //PTA
+        List<Libro> listalibri = Map.get(codiceScaffale);
+
+        for (int i = 0; i < listalibri.size(); i++) {
+         listalibri.get(i).getLibro();
+         listalibri.get(i).visualizzaCodiceCatalogazione();
+        }
+        
         for(int i=0; i < lettereScaffali.length; i++){
 
             if (lettereScaffali[i].equals(scaffale)){
@@ -64,6 +72,8 @@ public class Biblioteca {
 
     public void cercaPerISBN (String ISBN){
         int temp = 0;
+
+
 
         for(int i=0; i < piani.length; i++){
             if (piani[i]!=null){

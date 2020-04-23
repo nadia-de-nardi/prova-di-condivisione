@@ -47,7 +47,7 @@ public class Menu {
         return libro;
     }
 
-    public String getLibriPerPianoEScaffale (Biblioteca biblioteca){
+    public static String getLibriPerPianoEScaffale (Biblioteca biblioteca){
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Inserisci codicePiano:\n0) PT\n1)PP\n2)SP ");
