@@ -43,12 +43,15 @@ public class Biblioteca {
             }
         }
         for(int i=0; i < piani.length; i++){
-            if (piani[i]!=null && i==piano){
-                for(int j = 0; j < piani[i].getScaffali().length; j++){
-                    if(piani[i].getScaffali()[j] != null && j==indiceScaffale){
-                        for (int z = 0; z< piani[i].getScaffali()[j].getLibri().size(); z++){
-                            piani[i].getScaffali()[j].getLibri().get(z).getLibro();
-                            piani[i].getScaffali()[j].getLibri().get(z).visualizzaCodiceCatalogazione();
+            Piano pianoCorrente = piani[i];
+            if (pianoCorrente!=null && i==piano){
+                for(int j = 0; j < pianoCorrente.getScaffali().length; j++){
+                    Scaffale scaffaleCorrente = pianoCorrente.getScaffali()[j];
+                    if(scaffaleCorrente != null && j==indiceScaffale){
+                        for (int z = 0; z< scaffaleCorrente.getLibri().size(); z++){
+                            Libro libroCorrente = scaffaleCorrente.getLibri().get(z);
+                            libroCorrente.getLibro();
+                            libroCorrente.visualizzaCodiceCatalogazione();
 
 
                         }
