@@ -39,9 +39,9 @@ public class Biblioteca {
         String codicePianoEScaffale = piano + scaffale; //PTA
         List<Libro> listalibri = Scaffale.libri.get(codicePianoEScaffale);
 
-        for (int i = 0; i < listalibri.size(); i++) {
-         listalibri.get(i).getLibro();
-         listalibri.get(i).visualizzaCodiceCatalogazione();
+        for (Libro libro : listalibri) {
+         libro.getLibro();
+         libro.visualizzaCodiceCatalogazione();
         }
 
         for(int i=0; i < lettereScaffali.length; i++){
